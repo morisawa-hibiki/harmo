@@ -27,6 +27,21 @@
 		<style>
 			.style1 h2, .style1 p, .style1 ul.num { text-align: left !important; }
 			ul.num li { list-style-type: decimal; }
+
+			/* 貸しサロン 空き状況バッジ */
+			.status-badge {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 10px 24px;
+				border-radius: 999px;
+				font-weight: bold;
+				font-size: 1.05em;
+				color: #fff;
+				margin: 0.5em 0 1.2em;
+			}
+			.status-badge.available { background: #8B5E34; } /* 受付中：ブラウン */
+			.status-badge.full { background: #b03a3a; } /* 満室：レッド */
 		</style>
 		<section id="one" class="wrapper style1 special">
 			<div class="inner">
@@ -84,10 +99,18 @@
 				</div>
 			</section>
 			<section class="spotlight">
-				<div class="image"><img src="images/pic_sbg.jpg" alt="CommingSoon" /></div>
+				<div class="image"><img src="images/pic_salon.jpg" alt="貸しサロン" /></div>
 				<div class="content">
-					<h2>サバゲー・チームビルディング事業<br />Comming Soon</h2>
-					<p>サバゲー（サバイバルゲーム）を活用した革新的なチームビルディングおよび社員教育サービスを提供。このプログラムは、チームワークが要求される環境の中で実践的な協力とコミュニケーションスキルを磨くことを目指しています。</p>
+					<h2>貸しサロン<br />空き状況</h2>
+					<p>おかげさまで、多くの皆様にご利用いただいております。最新の空き状況は下記の通りです。見学・ご相談もお気軽にお問い合わせください。</p>
+					<p>
+						<!-- ▼▼ 毎月ここだけ書き換えればOK ▼▼ -->
+						<!-- 満室の場合は class="status-badge full" にして文言も「◯月予約満室」に変更 -->
+						<span class="status-badge available"><i class="fas fa-calendar-alt"></i> 8月予約受付中</span>
+					</p>
+					<ul class="actions">
+						<li><a href="mailto:info@harmo.co.jp" class="button primary">お問い合わせ</a></li>
+					</ul>
 				</div>
 			</section>
 		</section>
